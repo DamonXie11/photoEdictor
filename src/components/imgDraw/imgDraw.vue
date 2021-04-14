@@ -333,6 +333,8 @@ export default {
 
     },
     readFile() {
+      this.imgTittleList = [];
+      this.imgFile = [];
       var input = document.getElementById("file_input");
       let list = [];
       let list2 = [];
@@ -357,6 +359,10 @@ export default {
       }
       this.imgFile = list;
       this.imgTittleList = list2;
+    },
+    /** 显示或隐藏工具栏*/
+    handleShowTools(status) {
+      this.showTools = status;
     },
     /** 显示或隐藏设置栏*/
     handleShowOrHide(status) {
